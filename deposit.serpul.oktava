@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://skylightanimation.github.io/assets/plugin/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="https://skylightanimation.github.io/assets/plugin/bootstrap/3.3.7/bootstrap.min.css">
+<title>Deposit</title>
+<style>
+        body{
+            font-family: 'arial';
+            background-color: #333;
+        }
+        .head{
+            background-color: #00c0ff;
+            border-radius: 30px;
+            width: 80%;
+            color: white;
+            transition: 500ms;
+            text-align: center;
+        }
+        .head:hover{
+            background-color: rgb(173, 94, 2);
+            border-radius: 5px;
+            width: 89%;
+            color: white;
+            cursor: pointer;
+            transition: 500ms;
+        }
+        
+        h5{
+            margin-top:1%;
+        }
+        input[type=radio]+label {
+            color: #000;
+            display: inline-block;
+            padding: 4px;
+            background-color: white;                        
+            cursor: pointer;
+            border-radius: 3px;
+            width: 100%;
+            box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+        }        
+        input[type=radio] {
+            color: white;
+            display: none ;
+            cursor: none;
+            text-align: center;
+            padding: 4px;            
+            background-color: #9a9a9a; 				
+            transition: 500ms;
+            border-radius: 3px;
+            border:none;
+            box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+            }
+
+         input[type=radio]:checked+label {
+            background-image: url('https://i.ibb.co/D7dYKhQ/my-kuota.jpg') ;          
+            background-color:#9a9a9a;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 4px;
+            transition: 500ms;
+            width: 95%; 
+            margin-left: 10px;           
+            border:none;
+            box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+        }
+				 .kiosscript-icon{
+      				width: 80px; 	
+      				float:left;	      			
+      				border:1px solid grey; 
+      				padding: 5px;				  
+      				margin-right:8px;  		
+      				margin-left:8px;  			
+      				border-radius: 5px;
+      				margin-top: 15px;
+      				margin-bottom: 5px;
+      }
+      .qiosscript-bank{
+      				font-size: 14px;
+      			 margin-left: 10px;     			 
+      }
+				.qiosscript-info{
+								font-size: 12px;	
+								opacity: 0.7;
+				}
+        .button{
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+            transition: 500ms;
+            width: 70%;
+            text-align:center;
+            margin-top:-20px;
+            margin-bottom:25px;
+        }
+        .button:hover{
+            background-color: gold;
+            color: black;
+            padding: 10px;
+            border-radius: 35px;
+            transition: 500ms;
+            
+        }
+        .form-control {
+        			border-bottom:2px solid blue;
+        			border-top:2px solid blue;
+        			border-left: 2px solid blue;
+        			border-right: 2px solid blue;
+        			border-radius: 5px;
+        			box-shadow: none;
+        }
+        .form-control:hover{
+        			border-bottom:2px solid orangered;
+        			border-top:2px solid orangered;
+        			border-left: 2px solid orangered;
+        			border-right: 2px solid orangered;
+        			border-radius: 5px;
+        			box-shadow: none;
+        }
+        .kiosscriptAlert-button{
+  						background-color:#00aaf8;
+  				   color:#fff;
+  						border:none;
+  						box-shadow:none;
+						  border-radius:10px;
+  						font-weight:600;
+  						font-size:14px;
+  						padding:10px 24px;
+  				    margin:0;
+  						cursor:pointer;
+  						transition:500ms ;
+  						transform:translateY(1%);
+
+					}
+					.kiosscriptAlert-button:hover{ 
+  						background-color:gold;
+  						color:#fff;
+ 							border:none;
+  						box-shadow:none;
+  						border-radius:10px;
+  						font-weight:600;
+  						font-size:14px;
+  						padding:10px 24px;
+  						margin:0;
+  						cursor:pointer;
+  						transition:500ms ;
+  						transform:translateY(-5%);
+  
+					}
+					.jarak-bawah{
+					   margin-bottom:80px;
+					}
+
+            .kiosscript-icon h{      			      	
+      				float:left;			    			
+      }
+.card jarak-bawah p-2 mt-3{
+				 border-radiua:50px;
+}
+.qios-script-body{
+				background-color: white;
+				border-radius: 5px;
+				padding: 5px;
+				border:none;
+				text-align: center;
+				box-shadow: rgb(220, 220, 233) 1px 1px 1px 2px;
+				
+}
+.qios-script-body2 {
+  background-image: url('https://i.ibb.co/pfG57hV/vector-abstract-blue-and-yellow-background-vector-art-eps-ai.jpg');
+  background-color: none;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  text-align: center;
+  box-shadow: rgb(220, 220, 233) 1px 1px 1px 2px;
+
+}
+.qiosscript-judul{
+				font-size: 13px;
+				margin-top:2px;
+				color: white;
+				left:5px;
+				font-weight: 500;
+				opacity: 0.7;
+				margin-bottom: 10px;
+}
+.qios-script{
+		border: 3px solid #d1d1d1;
+   border-radius: 5px; 
+   background-color: #eaeaea;
+   padding: 0px;   
+   margin-right: 6px;      
+}
+.info {
+   text-align:center;
+   font-size: 13px;
+   font-weight: 400;
+   opacity: 0.6;
+}  
+.qiosscript-box{
+				background-color: #f1f2f3;
+				border-radius: 2px;
+				padding: 12px;
+				text-align: center;
+				box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+}  
+.qiosscript-box h{ 
+   font-size: 14px;
+   font-weight: bold;
+}        
+
+@mixin modal-fullscreen() {
+  padding: 0 !important; // override inline padding-right added from js
+  
+  .modal-dialog {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    border-radius: 10px;
+  }
+.modal-title{
+				font-size: 17px;		
+				color: red;	
+}  
+  .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-color: #f1f2f3;
+  }
+  
+  .modal-body {
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+ 
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-down($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    
+    .modal-fullscreen#{$infix} {
+      @include modal-fullscreen();
+    }
+  
+  }
+}
+
+
+// Styles for codepen
+html {
+  display: flex;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.btn-open-modal {
+  margin-bottom: 0.5em;
+}			
+.produk_qiosscript{
+  height: 90px;
+  padding: 7px;
+  margin-bottom:0.5px;
+background-image:linear-gradient(#ffffff,#ffffff);border-radius:3px;font-family:serif;
+ 				box-shadow: rgb(220, 220, 233) 1px 1px 1px 1px;
+}
+.nama-rekening{
+				font-size: 14px;
+				font-weight: bold;
+}
+    </style>
+</head>
+<body>
+					  
+   
+    <div class="container mt-4">
+    <div class="mt-3">
+<div class="qios-script-body2" style="margin-top:-10px;">	
+    			<label class="mt-4" style="text-align:left;float:left; color: white;"class="qiosscript-judul">Nominal</label>
+    			<input style="margin-left: 0px;width:100%" onkeyup="cetakDataInput()" id="nomor_telepon" placeholder="Rp.10.000" class="form-control" type="number" value="" autofocus="" />
+        <p id="alertUserId"><h class="qiosscript-judul"><i>Minimal Deposit Rp.10.000</i><br><i>Maxsimal Deposit Rp.<strike style="color:red;"><b>1.000.000</b></strike></i></h></p>  </div>				
+    			<!-- BANK PAYMENT -->
+    			<label class="mt-4"><li style="color:red;"><i>Bank Transfer</i></li></label>
+    			
+             					     					
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="𝙱𝚁𝙸𝚅𝙰 : 𝙱𝙴𝙻𝚄𝙼 𝚃𝙴𝚁𝚂𝙴𝙳𝙸𝙰 id="pay_1">
+<label for="pay_1"><img src="https://kiosscriptcode.files.wordpress.com/2022/03/postermaker_29032022_041352.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">Bank BCA</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+                  </div>
+<style>
+  .harga{
+    margin-top:-50px;
+  }
+</style>
+               
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="𝙱𝚁𝙸 : 𝙱𝙴𝙻𝚄𝙼 𝚃𝙴𝚁𝚂𝙴𝙳𝙸𝙰" id="pay_2">
+<label for="pay_2"><img src="https://kiosscriptcode.files.wordpress.com/2022/03/postermaker_29032022_041553-1.png" class="kiosscript-icon">
+<p class="qiosscript-bank">Bank BNI</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+                  </div>
+
+                 
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="𝙱𝚁𝙸 : 𝙱𝙴𝙻𝚄𝙼 𝚃𝙴𝚁𝚂𝙴𝙳𝙸𝙰" id="pay_3">
+<label for="pay_3"><img src="https://kiosscriptcode.files.wordpress.com/2022/03/postermaker_29032022_041440.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">Bank BRI</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+            </div>
+<label class="mt-4"><li style="color:red;"><i>E-Money</i></li></label>            
+                  </div>
+            
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="DANA : 081229630606" id="pay_5">
+<label for="pay_5"><img src="https://kiosscriptcode.files.wordpress.com/2022/03/postermaker_29032022_154801.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">DANA</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+                  </div>
+                  
+                  
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="081229630606" id="pay_5">
+<label for="pay_6"><img src="https://kiosscriptcode.files.wordpress.com/2022/03/postermaker_29032022_154932.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">GOPAY</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+                  </div>
+                  
+                  
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="OVO = 081229630606" id="pay_7">
+<label for="pay_7"><img src="https://kiosscriptcode.files.wordpress.com/2022/03/postermaker_29032022_155041.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">OVO</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+                  </div>
+                  
+                  
+                  <div class="" onclick="ambilPayment()">
+                    <input class="produk_qiosscript"type="radio" name="payment" value="LINK AJA = 082267503084" id="pay_8">
+<label for="pay_8"><img src="https://kiosscriptcode.files.wordpress.com/2022/04/postermaker_20042022_032131.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">LINK AJA</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>
+<label class="mt-4"><li style="color:red;"><i>Lainnya</i></li></label>
+                  </div>    
+   <div id="btnQris" class="" onclick="ambilPayment()">
+    <input class="produk_qiosscript"type="radio" name="payment" qris="qris" value="QRIS OPEN PAYMENT" id="pay_4">
+   <label for="pay_4"><img src="https://i.postimg.cc/HstdfbLy/IMG-20220601-090135-957-removebg-preview.png" class="kiosscript-icon"></p>
+<p class="qiosscript-bank">QRIS All Payment</br>
+<h class="qiosscript-info">Gratis Biaya Layanan</h>
+</p>
+</label>                 
+            
+           </div>
+
+</br>  
+<!-- TOMBOL PENGIRIMAN DATA -->
+<center> 
+  <button style="width:100%; color:#fff; background-color: blue;"class="btn btn-warnin btn-lg btn-open-modal" data-toggle="modal" data-target="#contoh"> Lanjutkan
+</button>
+</center>            
+<!-- AKHIR -->
+
+<!-- Modal Fullscreen xs -->
+<div class="modal modal-fullscreen" id="contoh" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>🔵 Manual Konfirmasi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+       </div>
+       
+
+       <div class="modal-body">   				
+      <div class="qios-script-body">   
+      <h style="font-size:12px;font-weight:bold;">ID DEPOSIT<div id="hasil-output"></div></h>				  
+      </div>
+   
+
+      </br> 	<!-- P E M B A T A S -->			 	      				
+       				
+      <!-- NOMINAL REQUEST -->       				
+      <div class="qios-script-body">   
+      <p>Nomor Akun Pembayaran</p>
+      <h style="font-size:12px;">tekan dan tahan nomor untuk menyalin</h>
+      <div class="qiosscript-box">      
+      <h id="hasil_payment"><font style="font-size:18px;color: red;">Belum Di Isi</font></h>  		  
+      </div>
+      </br>
+      <p class="nama-rekening">𝙰𝚝𝚊𝚜 𝙽𝚊𝚖𝚊 = oktava kuota</p>
+      </div>  
+      
+      <br>
+  <div id="contentQris" class="qios-script-body d-none">
+   <div style="margin-top:-20px" class="accordion accordion-flush" id="accordionFlushExample">
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button style="box-shadow:none" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        <p>Klik Untuk Menampilkan Kode bayar</p>
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <img width="150" class="img-fluid" src="https://.postimg.cc/Gtd7YZt3/qris-dinamis-1653106423948.png" alt="qris" />
+      </div>
+      </div>
+     </div>
+    </div>
+    </div>
+    
+    
+      </br> 	<!-- P E M B A T A S -->			 	
+        
+      <!-- NOMOR REKENING PEMBAYARAN -->
+      <div class="qios-script-body">          
+      <p>Nominal Bayar</p>		
+      <div class="qiosscript-box"> 
+      <p class="d-none" id="hasil_nomor">hasil</p>
+      <b>Rp.</b>
+      
+      <h id="total_rupiah"><font style="font-size:18px;color: red;">Belum Di Isi</font></h>
+
+      </div>
+
+      
+      
+      
+      </div>
+           					
+      </br> 	<!-- P E M B A T A S -->			 	
+        
+      <!-- INFORMASI -->
+      <div class="qios-script-body" style="text-align:left;">  
+     <p class="tutorial-pembayaran"style="font-weight:bold;">
+     Cara Pembayaran
+     </p>    				  
+<p style="font-weight:bold;border:1px solid grey;padding:4px;border-radius: 5px;">
+			📌	Waktu Deposit : 08.00 - 21.30 ( Jika Deposit Di Atas Jam 21.30 WIB Maka Akan Di Proses Keesokan Harinya
+		  </p>	
+		1.jangan mengunakan titik pada nominal top up. </br>
+		contoh salah (50,000)  </br>
+		contoh yang benar (50000)
+		</br>
+		2.Salin Nomor Pembayaran ( Tekan Dan Tahan Nomor Untuk Menyalin )</br>
+		3.Lakukan Transfer Sesuai Nominal</br>
+		4.Konfirmasi Pembayaran</br>
+		5.Transaksi Selesai Dan Saldo Akan Otomatis Masuk Dalam 15 Menit  		 
+     </div>	   				
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+       
+     <button onclick="kirimData()" type="button" class="btn btn-warning">Konfirmasi Deposit</button> 
+      </div>
+      
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+<p class="d-none" id="hasilNumUnik"></p>
+              <!-- End Pilihan -->
+<script>
+  function numberFormat(){
+    function rubah(angka) {
+      var reverse = angka.toString().split('').reverse().join(''),
+         ribuan = reverse.match(/\d{1,3}/g);
+         ribuan = ribuan.join('.').split('').reverse().join('');
+            return ribuan;
+    }
+  document.getElementById("total_rupiah").innerText = rubah(document.getElementById("hasilNumUnik").textContent);
+  }
+  
+  function getNumberRandom(){
+   var unikNum = Math.floor(Math.random() * 728) + 1
+   var getIputan = document.getElementById('hasil_nomor').innerHTML;
+    
+     resultNum = unikNum;
+     resultInput = getIputan;
+     
+     resultTotal = parseInt(resultNum)+parseInt(resultInput)
+     $('#hasilNumUnik').html(resultTotal)
+     
+  }
+  
+  setInterval(function(){
+    getN()
+    numberFormat()
+  },1000)
+  
+</script>
+    <script>
+    			// cetak data yang di klik 
+    			let cetakNomor = document.getElementById("hasil_nomor");
+    			let cetakHarga = document.getElementById("hasil_harga");    			
+    			let cetakPayment = document.getElementById("hasil_payment");
+    			 			
+    			
+    			// function onkeyup dari inputan
+					function cetakDataInput() {
+					getInputan = document.getElementById("nomor_telepon").value;
+					
+					cetakNomor.innerHTML = getInputan;
+					sendTopup = getInputan;
+					}
+    			
+    			// function ambil data bank yang di klik user
+					function ambilPayment() {
+					getPayment = $("input[name=payment]:checked").val();
+			if("QRIS OPEN PAYMENT" == getPayment){
+					  $("#contentQris").removeClass("d-none")
+					}else{
+					  $("#contentQris").addClass("d-none")
+					}
+					
+					getNumberRandom()
+					cetakPayment.innerHTML = getPayment;
+					sendPay = getPayment;
+					}
+		function getN(){
+		  getDataTopup = document.getElementById('total_rupiah').innerHTML;
+		  sendData = getDataTopup;
+		}
+					
+					let sendData = document.getElementById('ress');
+		function kirimData(){
+		  const url = "https://wa.me/6281229630606/?text="
+		  const head = "Hallo min saya ingin melakukan deposit%0A%0A";
+		  const srnama = "Nama : {{nama_user}} %0A";
+		  const sremail = "Email : {{email_user}}%0A";
+		  const topup = "Nominal : " + sendData +"%0A";
+		  const namarek = "Nama Rekening : NAMAREKMU / NAMA STORE %0A";
+		  const pay = "Metode Pembayaran : " + getPayment + "%0A";
+		  
+		  
+		  window.location.href=url+head+srnama+sremail+topup+namarek+pay;
+		}
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+				 				   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				 				    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+<script>
+
+				function maketextnumber(n) {
+    for (var r = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], e = n, t = new Array, a = 0; a <= e - 1; a++) {
+        t[a] = r[parseInt(Math.random() * r.length)];
+        t = t;
+        randomtextnumber = t.join("")
+    }
+}
+
+var hasil = document.getElementById("hasil-output");
+
+hasil.innerHTML = (maketextnumber(6), randomtextnumber);
+</script>
+</body>
+</html>
